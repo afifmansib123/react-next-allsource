@@ -2,29 +2,33 @@ import { useState,useEffect } from "react";
 
 const Myfunc = () => {
 
-  const [loading,setloading] = useState(false)
-  const [post, setpost] = useState([])
+  const [users, setuser] = useState([])
   const [error, seterror] = useState(false)
 
-  const handlefetch = () => {
-    setloading(true)
-    fetch("https://jsonplaceholder.typicode.com/posts/1").then((res)=>{return res.json()})
-    .then((data)=>{
-      setpost(data)
-      setloading(false)
+  useEffect(()=>{
+    fetch('https://jsonplaceholder.typicode.com/users').then((res)=>{
+      if(res.ok){
+        return res.json()
+      }else{
+        throw 'error getting user'
+      }
+    }).then((data)=>{
+      setuser(data)
+    }).catch((error)=>{
+      seterror(error)
     })
-    .catch((err)=>{
-      seterror(true)
-      setloading(false)
-    })
-  }
+  },[])
+
   return(
-    <button onClick={handlefetch}>
-      press me
-      {loading?"wait...":""}
-      <p>{post?.title}</p>
-    </button>
+    <div>
+      {error ? <h1>error haha</h1> : 
+      <ul>
+        {users.map((user)=><li key={user.id}>{user.name}</li>)}
+      </ul>
+      }
+    </div>
   )
 }
 
 export default Myfunc
+
