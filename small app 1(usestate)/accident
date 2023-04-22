@@ -1,0 +1,42 @@
+import { useState,useRef } from "react";
+
+const App = () => {
+
+  const [state,changestate] = useState({
+    brand : "",
+    quantity : 0,
+    tags: [],
+})
+
+  const handlechange = (e) => {
+    e.preventDefault();
+    changestate((prev)=>({...prev, [e.target.name]:e.target.value}))
+  }
+
+  const handlesubmit = () => {
+    alert(JSON.stringify(state))
+  }
+  const handleadd = (e) => {
+    e.preventDefault()
+    changestate((prev)=>({...prev, quantity: prev.quantity + 1}))
+  }
+
+  const handlesub = (e) => {
+    e.preventDefault()
+    changestate((prev)=>({...prev, quantity: prev.quantity - 1}))
+  }
+
+  return(
+  <div>
+    <form>
+      <label>name</label>
+      <input type = "text" name = "brand" onChange={handlechange}/>
+      <input type = "number" name = "quantity" onChange={handlechange}/>
+    </form><button onClick={handlesub}>-</button>
+    <span>({state.quantity})</span><button onClick={handleadd}>+</button>
+    <button onClick={handlesubmit}>click me</button>
+  </div>
+  )
+}
+
+export default App
