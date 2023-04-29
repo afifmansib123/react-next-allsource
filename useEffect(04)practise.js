@@ -32,3 +32,5 @@ const Myapp = () => {
 
 
 export default Myapp
+///////////////////////////////////for 1 coffee//////////////////////////////////////////////
+<div>{wines.filter((data, index) => index === 0).map((data) => <p>{data.location}</p>)}</div>
