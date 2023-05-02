@@ -11,13 +11,14 @@ const App = () => {
   })
 
   return (
+    <>
     <div style={{ display: "flex", flexDirection: "row" }}>
       <div
         style={{
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          height: "100vh",
+          height: "50vh",
           background: "darkorange",
           width: "50%"
         }}
@@ -25,21 +26,61 @@ const App = () => {
         <h2>SUNMI-TH : BIOT FOR BUSINESS</h2>
       </div>
 
+      
       <div
         style={{
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          height: "100vh",
+          height: "50vh",
           background: "red",
+          width: "50%"
+        }}
+      >
+
+        
+        <h2>SUNMI-TH : BIOT FOR BUSINESS</h2>
+      </div>
+
+    </div>
+
+    <div style={{ display: "flex", flexDirection: "row" }}>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          height: "50vh",
+          background: "green",
           width: "50%"
         }}
       >
         <h2>SUNMI-TH : BIOT FOR BUSINESS</h2>
       </div>
+
+      
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          height: "50vh",
+          background: "pink",
+          width: "50%"
+        }}
+      >
+
+        
+        <h2>SUNMI-TH : BIOT FOR BUSINESS</h2>
+      </div>
+
     </div>
+    
+    </>
+    
   );
 };
 
 export default App;
+
 
