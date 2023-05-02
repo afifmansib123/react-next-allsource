@@ -1,0 +1,45 @@
+import { useState, useEffect } from "react";
+
+const App = () => {
+  
+  const [device, setdevice] = useState({
+    devicename : "" , //name number of IOT device
+    devicemodel : "" , //model number of IOT device
+    price : "", // set a price for the item
+    quantity : 0, //set how many quantities are available for sale
+    tags : [] //set tags for the iot devices
+  })
+
+
+  return (
+    <>
+    <div
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        height: '50vh',
+        background: "darkorange"
+
+      }}
+    >
+      <h2>SUNMI-TH : BIOT FOR BUSINESS</h2>
+    </div>
+    
+    <div
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        height: '100vh',
+        background: "red"
+
+      }}
+    >
+      <h2>SUNMI-TH : BIOT FOR BUSINESS</h2>
+    </div>
+    </>
+  );
+};
+
+export default App;
