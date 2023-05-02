@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 const App = () => {
-  
+
   const [device, setdevice] = useState({
     devicename : "" , //name number of IOT device
     devicemodel : "" , //model number of IOT device
@@ -10,36 +10,36 @@ const App = () => {
     tags : [] //set tags for the iot devices
   })
 
-
   return (
-    <>
-    <div
-      style={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        height: '50vh',
-        background: "darkorange"
+    <div style={{ display: "flex", flexDirection: "row" }}>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          height: "100vh",
+          background: "darkorange",
+          width: "50%"
+        }}
+      >
+        <h2>SUNMI-TH : BIOT FOR BUSINESS</h2>
+      </div>
 
-      }}
-    >
-      <h2>SUNMI-TH : BIOT FOR BUSINESS</h2>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          height: "100vh",
+          background: "red",
+          width: "50%"
+        }}
+      >
+        <h2>SUNMI-TH : BIOT FOR BUSINESS</h2>
+      </div>
     </div>
-    
-    <div
-      style={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        height: '100vh',
-        background: "red"
-
-      }}
-    >
-      <h2>SUNMI-TH : BIOT FOR BUSINESS</h2>
-    </div>
-    </>
   );
 };
 
 export default App;
+
