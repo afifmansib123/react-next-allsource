@@ -1,0 +1,33 @@
+#JS Reference :
+
+# map()
+
+const array1 = [2,4,6,8,10]
+const array2 = array1.map(myfunc)
+
+function myfunc(x){
+    return (x*2)
+} 
+
+console.log(array2)
+
+
+# find()
+
+const array1 = [2,4,36,6,8,10]
+
+function myfunc(num){
+    return num%6==0
+}
+
+const x = array1.find(myfunc)
+console.log(x)
+
+#reduce
+
+const array = [1,2,3,4,5]
+
+const x = 3
+const sum = array.reduce((a,c)=>a+c,x)
+
+console.log(sum)
