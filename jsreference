@@ -31,3 +31,16 @@ const x = 3
 const sum = array.reduce((a,c)=>a+c,x)
 
 console.log(sum)
+
+#filter()
+
+const array1 = [1,2,3,4,5,6,7,8,9,10]
+
+function even(num){
+    if (num%2 == 0){
+        return num
+    }
+}
+
+const array2 = array1.filter(even)
+console.log(array2)
